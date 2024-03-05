@@ -1,0 +1,34 @@
+* Colors:
+1 --primary: #17c2ec;
+2 --white: #ffffff;
+3 --black: #000000;
+4 --secondary: #0b153c;
+
+5 --textPimary: var(--primary);
+6 --textWhite: var(--white);
+7 --textBlack: var(--black);
+8 --borderRadius: 1rem;
+
+
+/**************
+Font Family: Montserrat
+weights: 400, 700, 800, 600, 500
+sizes: 1rem, 1.2rem, 1.4rem, 1.8rem, 2rem, 2.4rem, 3.6rem, 4.8rem;
+************************/
+
+
+Commons:
+1) Section Title:
+sm - 2.4rem,
+md - 3.6rem
+lg - 4.8rem 
+
+
+2) body: 
+sm - 1.2rem;
+md - 1.8rem,
+lg - 2.4rem
+
+Section Spacing:
+sm - 4rem 7rem
+

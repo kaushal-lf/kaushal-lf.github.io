@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="shortcut icon" href="assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <!-- Poppins: 400, 500, 600, 700 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Faire | Todo App</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header class="header">
+      <div class="u-container">
+        <div class="header__wrapper">
+          <!-- Branding -->
+          <a href="/" class="header__branding">
+            <svg
+              class=""
+              width="80"
+              height="24.935064935064936"
+              viewBox="0 0 77 24"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <text
+                font-family="Montserrat-SemiBold, Montserrat"
+                font-size="24"
+                font-weight="500"
+                fill="#4499cc"
+                transform="translate(-2 -4)"
+              >
+                <tspan x="0" y="23">Faire</tspan>
+              </text>
+              <path
+                transform="translate(47)"
+                fill="#4499cc"
+                fill-rule="nonzero"
+                d="M20.794 10.776a.437.437 0 0 0 0-.608l-1.85-1.962a.403.403 0 0 0-.3-.131.403.403 0 0 0-.298.13l-6.215 6.459 2.467 2.532 6.196-6.42zm-18.102 4l7.15 7.345-1.253 1.29-.01.01c-.186.177-.663.598-1.224.598-.392 0-.86-.225-1.234-.617L.215 17.327a.44.44 0 0 1 0-.617l1.878-1.934a.419.419 0 0 1 .3-.131c.112 0 .214.047.299.13zm27.187-6.608a.435.435 0 0 1 0 .598l-14.113 14.59-.009.008c-.187.178-.664.599-1.224.599-.393 0-.86-.225-1.234-.617L7.393 17.27a.44.44 0 0 1 0-.617L9.27 14.72a.419.419 0 0 1 .3-.131c.111 0 .214.047.298.13l4.682 4.823L27.43 6.206a.403.403 0 0 1 .299-.131c.112 0 .224.046.299.13l1.85 1.963z"
+              ></path>
+            </svg>
+          </a>
+
+          <!-- Nav -->
+          <ul class="header__menu">
+            <li>
+              <a
+                href="#"
+                class="header__menu-link header__menu-link--active change-active-tab"
+                data-filter="ALL"
+                >home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="header__menu-link change-active-tab"
+                data-filter="COMPLETED"
+                >completed</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="header__menu-link change-active-tab"
+                data-filter="PENDING"
+                >remaining</a
+              >
+            </li>
+          </ul>
+
+          <!-- Header Action -->
+          <div class="header__cta">
+            <button
+              class="btn icon-btn icon-btn--primary header__cta-btn modal-opener"
+            >
+              <svg
+                class=""
+                width="25"
+                height="25"
+                viewBox="0 0 416 416"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  d="M208 0C93.1 0 0 93.1 0 208s93.1 208 208 208 208-93.1 208-208S322.9 0 208 0zm90.5 224H224v74.5c0 8.8-7.2 16-16 16-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3V224h-74.5c-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3 0-8.8 7.2-16 16-16H192v-74.5c0-8.8 7.2-16 16-16s16 7.2 16 16V192h74.5c8.8 0 16 7.2 16 16s-7.2 16-16 16z"
+                  fill="#4499cc"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Todo List -->
+    <section class="u-container">
+      <!-- Add task input field -->
+      <form id="add-task" class="add-task">
+        <input
+          type="text"
+          required
+          name="title"
+          placeholder="Add a task"
+          class="form-control add-task__input"
+        />
+        <div class="add-task__actions form-control-addon-wrapper">
+          <button
+            type="submit"
+            class="btn icon-btn icon-btn--primary"
+          >
+            <svg
+              class=""
+              width="25"
+              height="25"
+              viewBox="0 0 416 416"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M208 0C93.1 0 0 93.1 0 208s93.1 208 208 208 208-93.1 208-208S322.9 0 208 0zm90.5 224H224v74.5c0 8.8-7.2 16-16 16-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3V224h-74.5c-4.4 0-8.4-1.8-11.3-4.7-2.9-2.9-4.7-6.9-4.7-11.3 0-8.8 7.2-16 16-16H192v-74.5c0-8.8 7.2-16 16-16s16 7.2 16 16V192h74.5c8.8 0 16 7.2 16 16s-7.2 16-16 16z"
+                fill="#4499cc"
+              ></path>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="btn icon-btn icon-btn--secondary modal-opener"
+          >
+            <svg
+              class=""
+              width="24"
+              height="24"
+              viewBox="0 0 384 384"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M341.34 341.332H42.66V42.668H176V0H42.66C19.191 0 0 19.197 0 42.668v298.664C0 364.803 19.191 384 42.66 384h298.68c23.469 0 42.66-19.197 42.66-42.668V208h-42.66v133.332zM224 0v42.668h87.474L95.999 258.133l29.866 29.866 215.476-215.47V160H384V0H224z"
+                fill="#929292"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <!-- Task Lists -->
+
+      <div class="tasks">
+        <!-- <div class="task">
+          <div class="task__content">
+            <h3 class="task__title">${todo?.title}</h3>
+            <p class="task__text">${todo?.description || ''}</p>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="btn btn-icon btn-icon--secondary complete-btn"
+            >
+              <svg
+                class=""
+                width="25"
+                height="25"
+                viewBox="0 0 416 416"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  d="M208 28c48.1 0 93.3 18.7 127.3 52.7S388 159.9 388 208c0 48.1-18.7 93.3-52.7 127.3S256.1 388 208 388c-48.1 0-93.3-18.7-127.3-52.7S28 256.1 28 208c0-48.1 18.7-93.3 52.7-127.3S159.9 28 208 28zm0-28C93.1 0 0 93.1 0 208s93.1 208 208 208 208-93.1 208-208S322.9 0 208 0z"
+                  fill="#929292"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- Todo List Ends -->
+
+    <!-- Modal -->
+    <div class="modal-overlay modal-hidden" id="modal">
+      <div class="modal">
+        <div class="modal__header">
+          <h4 class="modal__title">Create a new task</h4>
+          <!-- Close button -->
+          <div>
+            <button
+              id="modal-close"
+              class="btn btn-icon modal-closer"
+              type="button"
+            >
+              <svg
+                class=""
+                width="25"
+                height="25"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  fill="#929292"
+                  d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Modal Body -->
+        <form action="#" id="modal-add-form">
+          <div class="modal__body">
+            <div class="modal-add-task">
+              <input
+                type="text"
+                name="title"
+                id="modal-task-title"
+                placeholder="Task Name"
+                class="form-control modal-add-task__title"
+                required
+                autofocus
+              />
+              <textarea
+                name="description"
+                required
+                placeholder="Task Description"
+                id="modal-task-description"
+                rows="3"
+                class="form-control modal-add-task__description"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal__footer">
+            <!-- Cance btn -->
+            <button
+              type="button"
+              class="btn btn-secondary modal__footer-btn modal-closer"
+            >
+              Cancel
+            </button>
+            <!-- Submit btn -->
+            <button
+              type="submit"
+              class="btn btn-primary modal__footer-btn"
+            >
+              Add Task
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Modal Ends -->
+
+    <!-- Bottom Navigation For Mobile -->
+    <ul class="bottom-nav">
+      <div class="bottom-nav__wrapper">
+        <!-- Link 1 -->
+        <li>
+          <a
+            href="#"
+            class="bottom-nav__link change-active-tab header__menu-link--active"
+            data-filter="ALL"
+          >
+            <div class="bottom-nav__link-icon">
+              <svg
+                class=""
+                width="25"
+                height="25"
+                viewBox="0 0 321 321"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  fill="#929292"
+                  d="M222.5 115.3c1.7-1.8 1.8-4.7 0-6.5l-19.8-21c-.8-.9-2-1.4-3.2-1.4-1.2 0-2.4.5-3.2 1.4l-66.5 69.1 26.4 27.1 66.3-68.7zM28.8 158.1l76.5 78.6-13.4 13.8-.1.1c-2 1.9-7.1 6.4-13.1 6.4-4.2 0-9.2-2.4-13.2-6.6l-63.2-65c-1.8-1.8-1.8-4.8 0-6.6l20.1-20.7c.9-.9 2-1.4 3.2-1.4 1.2 0 2.3.5 3.2 1.4zm290.9-70.7c1.7 1.8 1.7 4.7 0 6.4l-151 156.1-.1.1c-2 1.9-7.1 6.4-13.1 6.4-4.2 0-9.2-2.4-13.2-6.6l-63.2-65c-1.8-1.8-1.8-4.8 0-6.6l20.1-20.7c.9-.9 2-1.4 3.2-1.4 1.2 0 2.3.5 3.2 1.4l50.1 51.6L293.5 66.4c.8-.9 2-1.4 3.2-1.4 1.2 0 2.4.5 3.2 1.4l19.8 21z"
+                ></path>
+              </svg>
+            </div>
+            <p class="bottom-nav__link-text">all</p>
+          </a>
+        </li>
+        <!-- Link 2 -->
+        <li>
+          <a
+            href="#"
+            class="bottom-nav__link change-active-tab"
+            data-filter="COMPLETED"
+          >
+            <div class="bottom-nav__link-icon">
+              <svg
+                class=""
+                width="25"
+                height="25"
+                viewBox="0 0 416 416"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  d="M208 0C93.1 0 0 93.1 0 208s93.1 208 208 208 208-93.1 208-208S322.9 0 208 0zm106.5 150.5L180.8 284.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z"
+                  fill="#929292"
+                ></path>
+              </svg>
+            </div>
+            <p class="bottom-nav__link-text">completed</p>
+          </a>
+        </li>
+        <!-- Link 3 -->
+        <li>
+          <a
+            href="#"
+            class="bottom-nav__link change-active-tab"
+            data-filter="PENDING"
+          >
+            <div class="bottom-nav__link-icon">
+              <svg
+                class=""
+                width="25"
+                height="25"
+                viewBox="0 0 416 416"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  d="M208 28c48.1 0 93.3 18.7 127.3 52.7S388 159.9 388 208c0 48.1-18.7 93.3-52.7 127.3S256.1 388 208 388c-48.1 0-93.3-18.7-127.3-52.7S28 256.1 28 208c0-48.1 18.7-93.3 52.7-127.3S159.9 28 208 28zm0-28C93.1 0 0 93.1 0 208s93.1 208 208 208 208-93.1 208-208S322.9 0 208 0z"
+                  fill="#929292"
+                ></path>
+              </svg>
+            </div>
+            <p class="bottom-nav__link-text">remaining</p>
+          </a>
+        </li>
+      </div>
+    </ul>
+    <!-- Bottom Navigation Ends -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <div class="tasks-empty">
+          <div class="tasks-empty__icon">
+            <svg
+              class=""
+              width="100"
+              height="100"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <circle cx="92" cy="256" r="28" fill="#929292"></circle>
+              <circle cx="92" cy="132" r="28" fill="#929292"></circle>
+              <circle cx="92" cy="380" r="28" fill="#929292"></circle>
+              <path
+                fill="#929292"
+                d="M432 240H191.5c-8.8 0-16 7.2-16 16s7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16zm0 124H191.5c-8.8 0-16 7.2-16 16s7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16zM191.5 148H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H191.5c-8.8 0-16 7.2-16 16s7.2 16 16 16z"
+              ></path>
+            </svg>
+          </div>
+          <p class="tasks-empty__text">
+            You don't have any tasks yet. Create a new one.
+          </p>
+        </div> -->

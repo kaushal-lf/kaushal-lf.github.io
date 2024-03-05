@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Metal Forge</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <!-- start menu -->
+    <section class="menu" id="menu">
+      <div class="menu-wrapper">
+        <h1>2D Platform Shooting Game</h1>
+
+        <button id="play-btn">Play Game</button>
+
+        <!-- How to guide -->
+        <div class="guide-list">
+          <!-- Arrows -->
+          <div class="guide">
+            <img src="assets/arrows.png" alt="arrows" width="80px" />
+            <p>Use arrows to control your character</p>
+          </div>
+
+          <!-- Shoot -->
+          <div class="flex">
+            <div class="guide">
+              <div class="icon">Z</div>
+              <p>Shoot</p>
+            </div>
+
+            <!-- Jump -->
+            <div class="guide">
+              <div class="icon">X</div>
+              <p>Jump</p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="guide pause">
+              <div class="icon">P</div>
+              <p>Pause</p>
+            </div>
+
+            <!-- Jump -->
+            <div class="guide">
+              <p>Have fun!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta">Press space to start</div>
+      </div>
+    </section>
+
+    <!-- Game over -->
+    <section class="over" id="over">
+      <div class="over-wrapper">
+        <h1>This is it for tody!</h1>
+        <h1>Thank you for playing</h1>
+      </div>
+      <!--  -->
+    </section>
+
+    <!-- Audios -->
+    <audio src="audio/background.mp3" id="bg-music" loop></audio>
+    <audio src="audio/gun.mp3" id="shoot-music"></audio>
+    <audio src="audio/zombie-growl.mp3" id="zombie-music"></audio>
+    <audio src="audio/helicopter.wav" id="heli-music"></audio>
+
+    <!-- Load images -->
+    <img src="assets/background.jpg" class="hidden" />
+    <img src="assets/arrows.png" class="hidden" />
+    <img src="assets/angler1.png" class="hidden" />
+    <img src="assets/fireExplosion.png" class="hidden" />
+    <img src="assets/platform.png" class="hidden" />
+    <!-- hero -->
+    <img src="assets/hero/idle_1.png" class="hidden" />
+    <img src="assets/hero/idle_2.png" class="hidden" />
+    <img src="assets/hero/idle_3.png" class="hidden" />
+    <img src="assets/hero/idle_4.png" class="hidden" />
+    <img src="assets/hero/run_1.png" class="hidden" />
+    <img src="assets/hero/run_2.png" class="hidden" />
+    <img src="assets/hero/run_3.png" class="hidden" />
+    <img src="assets/hero/run_4.png" class="hidden" />
+
+    <img src="assets/tower/idle.png" class="hidden" />
+    <img src="assets/troop/idle1.png" class="hidden" />
+    <img src="assets/zombie/Idle (1).png" class="hidden" />
+
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>

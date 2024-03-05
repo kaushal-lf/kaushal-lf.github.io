@@ -1,0 +1,36 @@
+1) Fonts: 
+= Poppins - 600
+= Plus Jakarta Sans - 400, 500, 600, 700
+
+2) Colors:
+- heading, button: #1d1c31
+- text: rgba(29, 28, 49, 0.60);
+--text-2: #b6b3eb;
+--blueBg: #5d55ff;
+
+3) Buttons:
+-- primary: white - #fff, text: #1d1c31
+-- secondary: #4e46e8, text: #fff
+-- outline: rgba(255, 255, 255, 0.20);
+
+** Variables:
+-- fontPrimary: Plus Jakarta Sans
+-- fontSecondary: Poppins
+-- white: #ffffff
+--darkBlue: #1d1c31
+--midBlue: rgba(29, 28, 49, 0.60);
+--lightBlue: #5d55ff;
+--grey: #b6b3eb;
+--text-heading: var(--darkBlue)
+--text-content:  va(--midBlue)
+--text-grey: var(--grey)
+--text-link: var(--darkBlue)
+--textLinkHover: var(--lightBlue)
+--text-primary-btn: var(--darkBlue)
+--text-secondary-btn: var(--white)
+-- cardShadow: 0px 24px 64px -12px rgba(26, 24, 65, 0.06);
+-- radius: 8px;
+-- sectionMargin: 90px
+
+/******TEST******/
+line height should be 1.4 times to 1.7 times

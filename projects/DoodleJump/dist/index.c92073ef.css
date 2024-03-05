@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#canvas {
+  background: url("bck@2x.94c014e1.png");
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  margin: 0 auto;
+  display: block;
+}
+
+/*# sourceMappingURL=index.c92073ef.css.map */
